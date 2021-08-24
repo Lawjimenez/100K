@@ -1,0 +1,43 @@
+body{
+     margin: 0;
+     padding: 0;
+     background-color: rgba(68, 68, 59, 1);
+    }
+.bar{
+    float: left;
+    list-style: none;
+    margin-top: 30px;
+    padding-left: 30px;
+}
+.bar li{
+    display: inline-block;
+} 
+.bar li a{
+    color: #ffff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: poppins;
+    font-size: 22px;
+}
+.bar li a:hover{
+    background: #fff;
+    color: #333;
+}
+.Mission{
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    margin: 10% 27%;
+    text-align: center;
+}
+.Mission h1{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+.Mission p{
+    background-color: rgba(167, 0, 255, 0.37);
+    font-size: 18px;
+    text-indent: inherit;
+
+}

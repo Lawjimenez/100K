@@ -1,0 +1,51 @@
+body
+{
+    margin: 0;
+    padding: 0;x
+    font-family:  sans-serif;
+    background-image: url(BNF.jpg);
+    background-size:cover ;
+    background-position: center;
+      
+}
+.sign-up-form
+{
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0, 3);
+    background:rgba(117, 115, 115, 0.226);
+    margin:10% auto 0;
+    text-align: center;
+}
+.sign-up-form h1
+{
+background-color: rgba(0, 0, 0, 0.42);
+color: orange;
+margin-bottom: 15px;
+
+}
+.input-box
+{
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid rgb(89, 183, 238);
+    outline: none;
+}
+
+.signup-btn
+
+{
+    
+    font-size: 20px;
+    background-color:rgba(74, 134, 202, 0.856);
+    width: 70%;
+    padding: 8px;
+    border-radius: 20px;
+    font-size:  20px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+ 

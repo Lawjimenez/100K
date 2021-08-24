@@ -1,0 +1,63 @@
+<html doctype!>
+<html>
+<head>
+    <title>Welcome</title>
+    <style>
+     body{
+    margin: 0;
+    padding: 0;x
+    font-family:  sans-serif;
+    background-color: rgba(137, 84, 144, 0.9);    
+ }
+ body h1{
+
+ }
+.sign-up-form{ width:180px;
+margin:10% auto 0;
+text-align: center;
+}
+.signup-btn{font-size: 20px;
+    background-color:rgba(96, 213, 112, 0.9);
+    width: 70%;
+    padding: 8px;
+    border-radius: 20px;
+    font-size:  20px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+     }
+.msg{
+background-color:rgba(96, 213, 112, 0.9);
+    width: 70%;
+    padding: 8px;
+    border-radius: 20px;
+    font-size:  20px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+
+}
+
+</style>
+</head>
+<body>
+      <h1><a href="{% url 'home' %}">100K Book Drive</a></h1>
+      <span class="Name">User: {{request.user}}</span>
+  <span ><a  class="msg" href="{% url 'logout' %}">Logout</a></span>
+     <div class="sign-up-form">
+          <h1 class="Head">Benificiary</h1>
+          <form class="site-form" action="" method="POST">
+                    {% csrf_token %}
+                    {{form}}
+              <hr>  
+              <button onclick = "myfunc()"type="submit" class="signup-btn">Complete</button>
+          </form>
+     </div>
+     
+
+</body>
+</html>
+

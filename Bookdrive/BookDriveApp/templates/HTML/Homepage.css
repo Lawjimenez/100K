@@ -1,0 +1,89 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+  background-image: url(HMBG.jpg);
+  background-size: contain;
+  height: 142vh;
+  transition: 2s;
+
+}
+.bar{
+    background-size: contain;
+    margin: 0px;
+    transition: 2s;
+}
+
+nav{
+    height: 90px;
+    background-color:gray;
+    opacity: 62%;
+}
+nav ul{
+    padding: 0;
+    margin: 0;
+    float: center;
+    margin-right: 50px;
+}
+nav ul li{
+    list-style: none;
+    position: relative;
+    margin-top: 100px;
+    display: inline-flex;
+    line-height: 50px;
+}
+nav ul li a{
+    
+    color: white;
+    font-size: 25px;
+    padding:6px 40px;
+    font-family:'Roboto', sans-serif;
+    transition: 2s;
+}
+nav ul li a.active,
+nav ul li a:hover{
+    background: violet;
+    border-radius:1px;
+}
+.M1
+{
+font-size: 18px;
+color:black;
+  background-color: gray;
+  width: 500px;
+  padding: 50px;
+  margin: -100px 70px;
+  float: left;
+  transition: 1.5s;
+}
+.M2
+{
+  font-size: 18px;
+color:black;
+  background-color: gray;
+  width: 500px;
+  padding: 50px;
+  margin: -150px 70px;
+  float: right;
+  transition: 1.5s; 
+
+}
+.Mission
+{
+margin-left: 310px;
+color: white;
+line-height: 250px;
+transition: 2s;
+}
+.Photos
+{
+    color: white;
+    transition: 2s;
+    margin-top: -145px;
+    float: left;
+    margin-left: 120px;
+
+
+}

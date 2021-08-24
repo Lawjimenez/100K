@@ -1,0 +1,102 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listahan</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script>
+     $(document).ready(function()
+      {
+        var numberofbooks;
+        var totalbooks=100000;
+        $('td:nth-child(4)').each(function()
+        {
+            numberofbooks=$(this).html();
+            totalbooks-=parseInt(numberofbooks);
+            $('#totalbooks').text(totalbooks);
+        });
+
+
+      });
+   </script> 
+<style>
+body{
+    background-color:rgba(148, 106, 158, 1) ;}
+.Design {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+.Design td, .Design th {
+  border: 1px solid;
+  background-color: rgba(134, 142, 163, 1);
+  padding: 8px;
+
+}
+
+.Design tr:nth-child(even){background-color: #f2f2f2;}
+
+.Design tr:hover {background-color: #ddd;}
+
+.Design th {
+  border: 2px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+}
+</style>
+</head>
+
+<body>
+
+
+<h1><a href="{% url 'home' %}">Back</a></h1>
+<div class="Headingss">
+
+    <h3>Donator</h3>
+       <h3>Number of Donator = {{total_user}}</h3> 
+       <h1>Books Needed </h1>
+        <h1 id="totalbooks"></h1>
+</div>
+
+<table class="Design">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Kind of Books</th>
+                    <th>Number of Books</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                </tr>
+                {% for donator_info in donator_info %}
+                    <tr>
+                        <td>{{donator_info.name}}</td>
+                        <td>{{donator_info.email}}</td>
+                        <td>{{donator_info.kindofbooks}}</td>
+                        <td>{{donator_info.numberofbooks}}</td>
+                        <td>{{donator_info.location}}</td>
+                        <td>{{donator_info.status}}</td>
+                    {% if request.user.is_superuser %}
+                        <td><a class="btn btn-sm btn-info" href="{% url 'update' donator_info.id %}">Update</a></td>
+                    {% else %}
+
+                    {% endif %}
+                    </tr>
+                {% endfor %}
+        
+
+
+</table>
+
+
+</body>
+</html>
